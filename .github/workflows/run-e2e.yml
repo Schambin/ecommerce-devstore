@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Install Node.Js
         uses: actions/setup-node@v3
         with:
@@ -17,9 +17,8 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         env:
-          APP_URL: 'http://localhost:3000'
-          NEXT_PUBLIC_API_BASE_URL: 'https://devstore-api-sch.vercel.app/'
+          APP_URL: "http://localhost:3000"
+          NEXT_PUBLIC_API_BASE_URL: "https://devstore-api-sch.vercel.app/"
         with:
           build: npm run build
           start: npm start
-
